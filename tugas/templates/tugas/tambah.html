@@ -1,0 +1,11 @@
+{% extends "tugas/layout.html" %}
+
+{% block body %}
+    <h1>Tambah tugas</h1>
+    <form action="{% url 'tambah' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="submit" id="">
+    </form>
+    <a href="{% url 'index' %}">Daftar Tugas</a>
+{% endblock %}

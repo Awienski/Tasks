@@ -1,0 +1,11 @@
+{% extends "tugas/layout.html" %}
+
+{% block body %}
+    <h1>Tugas!</h1>
+    <ul>
+        {% for tugas in alltugas %}
+            <li>{{ tugas }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'tambah' %}">Tambah tugas</a>
+{% endblock %}
